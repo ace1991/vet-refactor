@@ -1,13 +1,12 @@
-# Template - Testing Sostenible con TypeScript
+# Kata Refactor Vet - Testing Sostenible con TypeScript
 
-Plantilla base para practicar las katas del curso o para empezar un proyecto nuevo.
+Dado como ejemplo el código y los test de un artefacto que filtra una tabla de resultados de búsqueda en base a filtros que vienen determinados por unos checkboxes en pantalla. Es un ejemplo que tiene que ver con casos veterinarios y sus diagnósticos.
 
-Incluye:
-* TypeScript
-* Jest
-* ESLint
-* Prettier
-* Husky
+El artefacto en cuestión es DiseaseFilter. Se trata de una clase que recibe en su constructor una lista de casos y una lista de diagnosis que no se modifican en ningún momento, por eso indicamos en el tipo que se tratan de solo lectura. El constructor no lo utilizamos directamente sino que solamente lo llamamos desde un "named constructor".
+
+El tipo Case representa un caso veterinario y contiene el id, el nombre del paciente, la id de la diagnosis, el nombre de la diagnosis y notas públicas y privadas. Mientras que el tipo Diagnosis representa un diagnóstico y tiene un id, un nombre, la localización, el sistema afectado, el origen y la especie.
+
+Siguiendo con la clase, DeseaseFilter dispone de otro método llamado addFilter, que básicamente recibe un location por parámetro (location representa la parte del cuerpo donde se manifiesta la enfermedad) y mediante el método get casesFiltered la clase devuelve una lista de los casos filtrados.
 
 ## Instrucciones
 * `npm install`
